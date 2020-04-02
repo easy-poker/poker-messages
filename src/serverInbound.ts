@@ -1,34 +1,35 @@
-export interface CreateTableMessage {
+export interface ServerInboundCreateTableMessage {
   type: "create-table";
   displayName: string;
   tableName: string;
 }
 
-export interface JoinTableMessage {
+export interface ServerInboundJoinTableMessage {
   type: "join-table";
   displayName: string;
   tableName: string;
   seatToken: string;
 }
 
-export interface LeaveTableMessage {
+export interface ServerInboundLeaveTableMessage {
   type: "leave-table";
   displayName: string;
   tableName: string;
   seatToken: string;
 }
 
-export interface RequestTableStateMessage {
+export interface ServerInboundRequestTableStateMessage {
   type: "request-table-state";
   displayName: string;
   tableName: string;
+  seatToken: string;
 }
 
 export type InboundMessage =
-  | CreateTableMessage
-  | JoinTableMessage
-  | LeaveTableMessage
-  | RequestTableStateMessage;
+  | ServerInboundCreateTableMessage
+  | ServerInboundJoinTableMessage
+  | ServerInboundLeaveTableMessage
+  | ServerInboundRequestTableStateMessage;
 
 export const isServerInboundMessage = (x: any): x is InboundMessage => {
   return typeof x.type === "string";
