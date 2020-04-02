@@ -1,18 +1,18 @@
 {
   "name": "poker-message-types",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Shared message types for poker-client and poker-server",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build" : "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build" : "tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/desmondmc/poker-message-types.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "desmondmc",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/desmondmc/poker-message-types/issues"
