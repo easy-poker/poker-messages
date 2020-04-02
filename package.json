@@ -1,0 +1,24 @@
+{
+  "name": "poker-message-types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build" : "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desmondmc/poker-message-types.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/desmondmc/poker-message-types/issues"
+  },
+  "homepage": "https://github.com/desmondmc/poker-message-types#readme",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
