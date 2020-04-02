@@ -4,6 +4,7 @@
   "description": "Shared message types for poker-client and poker-server",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files": ["lib/**/*"],
   "scripts": {
     "build" : "tsc"
   },
