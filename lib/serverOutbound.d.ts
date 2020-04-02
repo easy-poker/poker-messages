@@ -1,4 +1,4 @@
-export interface Table {
+export interface LimitedTable {
     readonly name: string;
     readonly seats: Seat[];
     readonly currentUser: {
@@ -18,7 +18,7 @@ export interface Player {
  */
 export interface ServerOutboundTableStateMessage {
     type: 'table-state';
-    table?: Table;
+    table?: LimitedTable;
 }
 export declare const isServerOutboundMessage: (x: any) => x is ServerOutboundTableStateMessage;
 export declare type ServerOutboundMessage = ServerOutboundTableStateMessage;
