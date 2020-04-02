@@ -20,4 +20,5 @@ export interface ServerOutboundTableStateMessage {
     type: 'table-state';
     table?: Table;
 }
+export declare const isServerOutboundMessage: (x: any) => x is ServerOutboundTableStateMessage;
 export declare type ServerOutboundMessage = ServerOutboundTableStateMessage;

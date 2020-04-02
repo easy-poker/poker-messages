@@ -22,4 +22,8 @@ export interface ServerOutboundTableStateMessage {
   table?: Table;
 }
 
+export const isServerOutboundMessage = (x: any): x is ServerOutboundMessage => {
+  return typeof x.type === "string";
+};
+
 export type ServerOutboundMessage = ServerOutboundTableStateMessage;
