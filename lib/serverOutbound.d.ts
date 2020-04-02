@@ -1,6 +1,10 @@
 export interface Table {
     readonly name: string;
     readonly seats: Seat[];
+    readonly currentUser: {
+        displayName: string;
+        seatToken: string;
+    };
 }
 export interface Seat {
     readonly token: string;
@@ -12,14 +16,8 @@ export interface Player {
 /**
  * Messages
  */
-export interface TableStateMessage {
+export interface ServerOutboundTableStateMessage {
     type: 'table-state';
     table?: Table;
 }
-export interface UserStateMessage {
-    type: 'user-state';
-    displayName: string;
-    tableName: string;
-    seatToken: string;
-}
-export declare type ServerOutboundMessage = TableStateMessage | UserStateMessage;
+export declare type ServerOutboundMessage = ServerOutboundTableStateMessage;
