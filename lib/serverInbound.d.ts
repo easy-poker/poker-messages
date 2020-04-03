@@ -1,23 +1,19 @@
 export interface ServerInboundCreateTableMessage {
     type: "create-table";
-    displayName: string;
     tableName: string;
 }
 export interface ServerInboundJoinTableMessage {
     type: "join-table";
-    displayName: string;
     tableName: string;
     seatToken: string;
 }
 export interface ServerInboundLeaveTableMessage {
     type: "leave-table";
-    displayName: string;
     tableName: string;
     seatToken: string;
 }
 export interface ServerInboundRequestTableStateMessage {
     type: "request-table-state";
-    displayName: string;
     tableName: string;
     seatToken: string;
 }
