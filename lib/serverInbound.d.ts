@@ -22,5 +22,11 @@ export interface ServerInboundStartGameMessage {
     tableName: string;
     seatToken: string;
 }
-export declare type ServerInboundMessage = ServerInboundCreateTableMessage | ServerInboundJoinTableMessage | ServerInboundLeaveTableMessage | ServerInboundRequestTableStateMessage | ServerInboundStartGameMessage;
+export interface ServerInboundPlaceBetMessage {
+    type: "place-bet";
+    tableName: string;
+    seatToken: string;
+    tokenCount: number;
+}
+export declare type ServerInboundMessage = ServerInboundCreateTableMessage | ServerInboundJoinTableMessage | ServerInboundLeaveTableMessage | ServerInboundRequestTableStateMessage | ServerInboundStartGameMessage | ServerInboundPlaceBetMessage;
 export declare const isServerInboundMessage: (x: any) => x is ServerInboundMessage;

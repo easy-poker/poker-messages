@@ -27,12 +27,20 @@ export interface ServerInboundStartGameMessage {
   seatToken: string;
 }
 
+export interface ServerInboundPlaceBetMessage {
+  type: "place-bet";
+  tableName: string;
+  seatToken: string;
+  tokenCount: number;
+}
+
 export type ServerInboundMessage =
   | ServerInboundCreateTableMessage
   | ServerInboundJoinTableMessage
   | ServerInboundLeaveTableMessage
   | ServerInboundRequestTableStateMessage
-  | ServerInboundStartGameMessage;
+  | ServerInboundStartGameMessage
+  | ServerInboundPlaceBetMessage;
 
 export const isServerInboundMessage = (x: any): x is ServerInboundMessage => {
   return typeof x.type === "string";
