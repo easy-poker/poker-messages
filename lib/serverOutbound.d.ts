@@ -4,6 +4,10 @@ export interface LimitedTable {
     readonly bettingRound: BettingRound;
     readonly potChipCount: number;
     readonly seats: Seat[];
+    readonly currentUser: {
+        displayName: string;
+        seatToken: string;
+    };
 }
 export declare type BettingRound = "pre-deal" | "pre-flop" | "flop" | "turn" | "river";
 export interface Seat {
