@@ -31,7 +31,7 @@ export interface ServerInboundPlaceBetMessage {
   type: "place-bet";
   tableName: string;
   seatToken: string;
-  tokenCount: number;
+  chipCount: number;
 }
 
 export type ServerInboundMessage =
