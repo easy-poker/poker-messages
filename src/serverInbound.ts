@@ -21,11 +21,18 @@ export interface ServerInboundRequestTableStateMessage {
   seatToken: string;
 }
 
+export interface ServerInboundStartGameMessage {
+  type: "start-game";
+  tableName: string;
+  seatToken: string;
+}
+
 export type InboundMessage =
   | ServerInboundCreateTableMessage
   | ServerInboundJoinTableMessage
   | ServerInboundLeaveTableMessage
-  | ServerInboundRequestTableStateMessage;
+  | ServerInboundRequestTableStateMessage
+  | ServerInboundStartGameMessage;
 
 export const isServerInboundMessage = (x: any): x is InboundMessage => {
   return typeof x.type === "string";
