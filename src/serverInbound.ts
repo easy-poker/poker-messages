@@ -27,13 +27,13 @@ export interface ServerInboundStartGameMessage {
   seatToken: string;
 }
 
-export type InboundMessage =
+export type ServerInboundMessage =
   | ServerInboundCreateTableMessage
   | ServerInboundJoinTableMessage
   | ServerInboundLeaveTableMessage
   | ServerInboundRequestTableStateMessage
   | ServerInboundStartGameMessage;
 
-export const isServerInboundMessage = (x: any): x is InboundMessage => {
+export const isServerInboundMessage = (x: any): x is ServerInboundMessage => {
   return typeof x.type === "string";
 };

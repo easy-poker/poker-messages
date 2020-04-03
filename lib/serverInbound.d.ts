@@ -22,5 +22,5 @@ export interface ServerInboundStartGameMessage {
     tableName: string;
     seatToken: string;
 }
-export declare type InboundMessage = ServerInboundCreateTableMessage | ServerInboundJoinTableMessage | ServerInboundLeaveTableMessage | ServerInboundRequestTableStateMessage | ServerInboundStartGameMessage;
-export declare const isServerInboundMessage: (x: any) => x is InboundMessage;
+export declare type ServerInboundMessage = ServerInboundCreateTableMessage | ServerInboundJoinTableMessage | ServerInboundLeaveTableMessage | ServerInboundRequestTableStateMessage | ServerInboundStartGameMessage;
+export declare const isServerInboundMessage: (x: any) => x is ServerInboundMessage;
