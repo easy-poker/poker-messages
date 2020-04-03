@@ -11,14 +11,12 @@ export interface ServerInboundJoinTableMessage {
 
 export interface ServerInboundLeaveTableMessage {
   type: "leave-table";
-  displayName: string;
   tableName: string;
   seatToken: string;
 }
 
 export interface ServerInboundRequestTableStateMessage {
   type: "request-table-state";
-  displayName: string;
   tableName: string;
   seatToken: string;
 }
