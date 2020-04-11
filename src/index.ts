@@ -1,2 +1,2 @@
-export * from './serverOutbound';
-export * from './serverInbound';
+export * from './server';
+export * from './client';
