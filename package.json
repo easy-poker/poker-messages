@@ -1,5 +1,5 @@
 {
-  "name": "poker-message-types",
+  "name": "poker-messages",
   "version": "1.0.0",
   "description": "Shared message types for poker-client and poker-server",
   "main": "lib/index.js",
