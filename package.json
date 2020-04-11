@@ -1,6 +1,6 @@
 {
   "name": "poker-messages",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Shared message types for poker-client and poker-server",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,16 +12,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/desmondmc/poker-message-types.git"
+    "url": "git+https://github.com/easy-poker/poker-messages.git"
   },
   "keywords": [],
   "author": "desmondmc",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/desmondmc/poker-message-types/issues"
+    "url": "https://github.com/easy-poker/poker-messages/issues"
   },
-  "homepage": "https://github.com/desmondmc/poker-message-types#readme",
+  "homepage": "https://github.com/easy-poker/poker-messages#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@easy-poker"
+  },
+  "peerDependencies": {
+    "@easy-poker/poker-cards": ">=0.0.12"
+  },
   "devDependencies": {
+    "@easy-poker/poker-cards": "0.0.12",
     "typescript": "3.8.3"
   }
 }

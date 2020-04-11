@@ -73,6 +73,8 @@ export type ClientMessage =
   | ClientCallMessage
   | ClientCheckMessage;
 
-export const isClientMessage = (x: any): x is ClientMessage => {
-  return typeof x.type === "string" && x.type.startsWith("client/");
+export const isClientMessage = (x: unknown): x is ClientMessage => {
+  const { type } = x as ClientMessage;
+
+  return typeof type === "string" && type.startsWith("client/");
 };
