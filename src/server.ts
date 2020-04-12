@@ -1,4 +1,4 @@
-import type { Cards } from "@easy-poker/poker-cards";
+import type { Cards } from "@pairjacks/poker-cards";
 
 export interface ClientSplitPot {
   players: string[];
