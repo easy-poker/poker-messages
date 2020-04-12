@@ -52,7 +52,6 @@ export interface Seat {
   readonly isTurnToBet: boolean;
   readonly isFolded: boolean;
   readonly isBust: boolean;
-  readonly isPocketRevealed: boolean;
   readonly chipCount: number;
   readonly chipsBetCount: number;
   readonly player?: Player;
