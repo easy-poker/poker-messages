@@ -1,1 +1,1 @@
-# poker-message-types
+# poker-messages

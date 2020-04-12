@@ -1,6 +1,6 @@
 {
-  "name": "poker-messages",
-  "version": "1.0.0",
+  "name": "@pairjacks/poker-messages",
+  "version": "0.1.0-test.1",
   "description": "Shared message types for poker-client and poker-server",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,16 +12,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/desmondmc/poker-message-types.git"
+    "url": "git+https://github.com/pairjacks/poker-messages.git"
   },
   "keywords": [],
   "author": "desmondmc",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/desmondmc/poker-message-types/issues"
+    "url": "https://github.com/pairjacks/poker-messages/issues"
   },
-  "homepage": "https://github.com/desmondmc/poker-message-types#readme",
+  "homepage": "https://github.com/pairjacks/poker-messages#readme",
+  "peerDependencies": {
+    "@pairjacks/poker-cards": ">=0.1.0"
+  },
   "devDependencies": {
-    "typescript": "^3.8.3"
+    "@pairjacks/poker-cards": "0.1.0",
+    "typescript": "3.8.3"
   }
 }

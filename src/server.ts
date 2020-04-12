@@ -1,30 +1,5 @@
-enum Suit {
-  Diamonds = "Diamonds",
-  Clubs = "Clubs",
-  Hearts = "Heart",
-  Spades = "Spades"
-}
+import type { Cards } from "@pairjacks/poker-cards";
 
-enum Face {
-  Two = "Two",
-  Three = "Three",
-  Four = "Four",
-  Five = "Five",
-  Six = "Six",
-  Seven = "Seven",
-  Eight = "Eight",
-  Nine = "Nine",
-  Ten = "Ten",
-  Jack = "Jack",
-  Queen = "Queen",
-  King = "King",
-  Ace = "Ace"
-}
-
-type Card = readonly [Face, Suit];
-
-/** Convenience type expressing a readonly array of readonly cards */
-export declare type Cards = readonly Card[];
 export interface ClientSplitPot {
   players: string[];
   chipCount: number;
@@ -71,8 +46,11 @@ export interface ServerTableStateMessage {
   table?: LimitedTable;
 }
 
-export const isServerMessage = (x: any): x is ServerMessage => {
-  return typeof x.type === "string";
+export const isServerMessage = (x: unknown): x is ServerMessage => {
+  const { type } = x as ServerMessage;
+
+  // TODO: message type prefix to check against
+  return typeof type === "string";
 };
 
 export type ServerMessage = ServerTableStateMessage;
