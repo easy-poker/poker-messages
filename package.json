@@ -1,6 +1,6 @@
 {
   "name": "@pairjacks/poker-messages",
-  "version": "0.1.0-test.1",
+  "version": "0.1.0-test.2",
   "description": "Shared message types for poker-client and poker-server",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
