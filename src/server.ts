@@ -13,6 +13,7 @@ export interface LimitedTable {
   readonly splitPots: ClientSplitPot[];
   readonly seats: Seat[];
   readonly communityCards: Cards;
+  readonly maxBetChipCount: number;
   readonly currentUser: {
     displayName: string;
     seatToken: string;
