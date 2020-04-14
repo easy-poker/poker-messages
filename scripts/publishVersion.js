@@ -14,7 +14,7 @@ exec(`json -I -f package.json -e 'this.version="${version}"'`, (error) => {
   }
 
   exec(
-    `git add . && git commit -m "version ${version}" && git push && git push origin v${version}`,
+    `git add . && git commit -m "version ${version}"`,
     (error) => {
       if (error) {
         console.log(`error: ${error.message}`);
