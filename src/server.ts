@@ -15,7 +15,6 @@ export interface LimitedTable {
   readonly communityCards: Cards;
   readonly maxBetChipCount: number;
   readonly currentUser: {
-    displayName: string;
     seatToken: string;
   };
 }
@@ -30,12 +29,8 @@ export interface Seat {
   readonly isBust: boolean;
   readonly chipCount: number;
   readonly chipsBetCount: number;
-  readonly player?: Player;
-  readonly pocketCards?: Cards;
-}
-
-export interface Player {
   readonly displayName: string;
+  readonly pocketCards?: Cards;
 }
 
 /**
@@ -43,15 +38,14 @@ export interface Player {
  */
 
 export interface ServerTableStateMessage {
-  type: "table-state";
+  type: "server/table-state";
   table?: LimitedTable;
 }
+
+export type ServerMessage = ServerTableStateMessage;
 
 export const isServerMessage = (x: unknown): x is ServerMessage => {
   const { type } = x as ServerMessage;
 
-  // TODO: message type prefix to check against
-  return typeof type === "string";
+  return typeof type === "string" && type.startsWith("server/");
 };
-
-export type ServerMessage = ServerTableStateMessage;

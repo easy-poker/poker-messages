@@ -61,6 +61,12 @@ export interface ClientCheckMessage {
   seatToken: string;
 }
 
+export interface ClientChangeDisplayNameMessage {
+  type: "client/change-display-name";
+  tableName: string;
+  seatToken: string;
+}
+
 export type ClientMessage =
   | ClientCreateTableMessage
   | ClientJoinTableMessage
@@ -71,7 +77,8 @@ export type ClientMessage =
   | ClientPlaceBetMessage
   | ClientFoldMessage
   | ClientCallMessage
-  | ClientCheckMessage;
+  | ClientCheckMessage
+  | ClientChangeDisplayNameMessage;
 
 export const isClientMessage = (x: unknown): x is ClientMessage => {
   const { type } = x as ClientMessage;
