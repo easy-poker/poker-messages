@@ -23,6 +23,7 @@ export type BettingRound = "pre-deal" | "pre-flop" | "flop" | "turn" | "river";
 
 export interface Seat {
   readonly token: string;
+  readonly isEmpty: boolean;
   readonly isDealer: boolean;
   readonly isTurnToBet: boolean;
   readonly isFolded: boolean;
