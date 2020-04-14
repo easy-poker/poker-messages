@@ -2,8 +2,5 @@
 
 ### Deploying a new version to npm
 
-1. Update package.json version to the correct version number
-2. Commit all your changes
-3. Make a git tag - `git tag -a v0.1.6 -m "version 0.1.6"`
-4. Push the new tag to origin - `git push && git push origin v0.1.6`
-
+1. Make sure you have `json` installed - `npm install -g json`
+2. Run `npm run publish-version 0.1.9`
