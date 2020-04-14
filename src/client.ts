@@ -4,6 +4,7 @@ export interface ClientCreateTableMessage {
   numberOfSeats: number;
   startingChipCount: number;
   smallBlind: number;
+  highlightRelevantCards: boolean;
 }
 
 export interface ClientJoinTableMessage {

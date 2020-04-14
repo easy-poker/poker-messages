@@ -14,6 +14,7 @@ export interface LimitedTable {
   readonly seats: Seat[];
   readonly communityCards: Cards;
   readonly maxBetChipCount: number;
+  readonly highlightRelevantCards: boolean;
   readonly currentUser: {
     seatToken: string;
   };
