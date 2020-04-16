@@ -1,6 +1,6 @@
 import type { Cards } from "@pairjacks/poker-cards";
 
-export interface ClientSplitPot {
+export interface ClientPot {
   players: string[];
   chipCount: number;
 }
@@ -9,8 +9,8 @@ export interface LimitedTable {
   readonly isStarted: boolean;
   readonly name: string;
   readonly bettingRound: BettingRound;
-  readonly potChipCount: number;
-  readonly splitPots: ClientSplitPot[];
+  readonly activePot: ClientPot;
+  readonly splitPots: ClientPot[];
   readonly seats: Seat[];
   readonly communityCards: Cards;
   readonly maxBetChipCount: number;
